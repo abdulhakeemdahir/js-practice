@@ -95,20 +95,26 @@ const measureKelvin = function () {
 //   return high - low;
 // };
 
-const calcTempAmplitudeBug = function (temps) {
-  let low = 0;
-  let high = 0;
-  for (let i = 0; i < temps.length; i++) {
-    const currentTemp = temps[i];
-    if (typeof currentTemp !== "number") continue;
-    console.log(currentTemp);
-    debugger;
-    if (currentTemp < low) low = currentTemp;
-    else if (currentTemp > high) high = currentTemp;
-    console.log(high, low);
-  }
-  return high - low;
+// const calcTempAmplitudeBug = function (temps) {
+//   let low = 0;
+//   let high = 0;
+//   for (let i = 0; i < temps.length; i++) {
+//     const currentTemp = temps[i];
+//     if (typeof currentTemp !== "number") continue;
+//     console.log(currentTemp);
+//     debugger;
+//     if (currentTemp < low) low = currentTemp;
+//     else if (currentTemp > high) high = currentTemp;
+//     console.log(high, low);
+//   }
+//   return high - low;
+// };
+
+// const amplitude = calcTempAmplitudeBug(temperatures);
+// console.log(`The amplitude is ${amplitude}`);
+
+const printForecast = function (arr) {
+  return `${arr[0]} in 1 days...${arr[1]} in 2 days...${arr[2]} in 3 dayss `;
 };
 
-const amplitude = calcTempAmplitudeBug(temperatures);
-console.log(`The amplitude is ${amplitude}`);
+console.log(printForecast([45, 67, 90]));
